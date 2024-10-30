@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'pngtree-medical-health-logo-image_79595.jpg'%}" alt="">
+        
+        <nav>
+            <li>
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'calculadora_imc' %}">Calculadora IMC</a>
+            </li>
+        </nav>
+
+    </header>
+
+    {% block header %} {% endblock %}
+
+    <main>
+        {% block main %}
+
+        {% endblock %}
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
